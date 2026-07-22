@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soumission | KSL Entretien</title>
+  <meta name="description" content="Demandez une soumission pour un service d’entretien KSL.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<a class="skip" href="#main">Aller au contenu</a>
+<header class="header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html">
+      <span class="logo">KSL</span>
+      <span><strong>KSL Conseils &amp; Services</strong><small>Division Entretien</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false">Menu</button>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="services.html">Services</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="a-propos.html">À propos</a>
+      <a class="btn small" href="soumission.html">Soumission</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="page-hero"><div class="container"><span class="eyebrow">Soumission</span><h1>Parlez-nous de votre besoin</h1><p>Le formulaire prépare un courriel avec les informations saisies. Aucune donnée n’est stockée sur le site.</p></div></section>
+<section class="section">
+  <div class="container contact-grid">
+    <div>
+      <h2>Coordonnées</h2>
+      <div class="contact-box">
+        <p><strong>Courriel :</strong> <a id="display-email" href="#">À configurer</a></p>
+        <p><strong>Téléphone :</strong> <a id="display-phone" href="#">À configurer</a></p>
+        <p><strong>Zone :</strong> Québec et environs</p>
+      </div>
+    </div>
+    <form id="quote-form" class="form">
+      <label>Nom complet<input name="name" required></label>
+      <label>Entreprise<input name="company"></label>
+      <label>Courriel<input name="email" type="email" required></label>
+      <label>Téléphone<input name="phone" type="tel"></label>
+      <label>Service<select name="service" required><option value="">Sélectionnez</option><option>Nettoyage commercial</option><option>Conduits de sécheuses ou de poêles</option><option>Tonte et entretien extérieur</option><option>Déneigement manuel</option><option>Autre</option></select></label>
+      <label class="full">Détails<textarea name="message" rows="6" required placeholder="Lieu, fréquence, superficie, échéance…"></textarea></label>
+      <button class="btn full" type="submit">Préparer la demande</button>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container footer-grid">
+    <div><strong>KSL Conseils &amp; Services S.E.N.C.</strong><p>Entretien commercial, extérieur et services de proximité à Québec.</p></div>
+    <div><a href="services.html">Services</a><a href="soumission.html">Soumission</a><a href="https://ti.kslsolutionquebec.ca/">Pôle TI &amp; cybersécurité</a></div>
+    <div><p>© <span id="year"></span> KSL. Tous droits réservés.</p></div>
+  </div>
+</footer>
+<a id="whatsapp" class="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
+<script src="config.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

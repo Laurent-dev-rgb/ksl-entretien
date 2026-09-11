@@ -1,5 +1,5 @@
 window.KSL_CONFIG = {
-  email: "kslsolutionquebec@gmail.com",
+  email: "entretien@kslgroupe.ca",
   phoneDisplay: "(367) 330-3592",
   phoneE164: "+13673303592",
   whatsappE164: "+13673303592",

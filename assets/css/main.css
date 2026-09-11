@@ -5,3 +5,17 @@
 .consent{display:flex!important;align-items:flex-start;gap:10px}
 .consent input{width:auto!important;margin-top:5px}
 .form button:disabled{opacity:.65;cursor:wait}
+.logo-img{
+  width:150px;
+  height:64px;
+  object-fit:contain;
+  display:block;
+  border-radius:8px;
+}
+
+@media(max-width:700px){
+  .logo-img{
+    width:120px;
+    height:52px;
+  }
+}

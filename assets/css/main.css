@@ -35,4 +35,16 @@
   }
 }
 
+.footer-logo{
+  width:180px;
+  height:auto;
+  object-fit:contain;
+  display:block;
+  margin-bottom:18px;
+}
 
+@media(max-width:700px){
+  .footer-logo{
+    width:150px;
+  }
+}

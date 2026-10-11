@@ -28,13 +28,18 @@
 </header>
 <main id="main">
 
-<section class="page-hero"><div class="container"><span class="eyebrow">Galerie</span><h1>Nos interventions en images</h1><p>Ajoutez ici vos photos avant/après lorsque vous aurez des images clients autorisées.</p></div></section>
+<section class="page-hero"><div class="container"><span class="eyebrow">Galerie</span><h1>Nos interventions en images</h1><p>Découvrez des photos réelles de nos interventions. Les images sont publiées uniquement lorsqu’elles peuvent être utilisées sans exposer de renseignements personnels.</p></div></section>
 <section class="section">
-  <div class="container gallery">
-    <article><div class="placeholder">Photo avant</div><h3>Nettoyage commercial</h3><p>Exemple de présentation avant intervention.</p></article>
-    <article><div class="placeholder">Photo après</div><h3>Résultat final</h3><p>Exemple de présentation après intervention.</p></article>
-    <article><div class="placeholder">Photo terrain</div><h3>Entretien extérieur</h3><p>Ajoutez une photo réelle lorsque vous avez l’autorisation du client.</p></article>
-    <article><div class="placeholder">Photo conduit</div><h3>Entretien spécialisé</h3><p>Documentez les interventions sans montrer de renseignements personnels.</p></article>
+  <div class="container">
+    <div class="gallery-toolbar" aria-label="Filtrer la galerie">
+      <button class="gallery-filter active" data-category="">Toutes</button>
+      <button class="gallery-filter" data-category="commercial">Commercial</button>
+      <button class="gallery-filter" data-category="exterieur">Extérieur</button>
+      <button class="gallery-filter" data-category="specialise">Spécialisé</button>
+      <button class="gallery-filter" data-category="resultat">Résultats</button>
+    </div>
+    <div id="gallery-status" class="gallery-status">Chargement des réalisations…</div>
+    <div id="gallery-grid" class="gallery"></div>
   </div>
 </section>
 
@@ -48,6 +53,7 @@
 </footer>
 <a id="whatsapp" class="whatsapp" href="#" target="_blank" rel="noopener">WhatsApp</a>
 <script src="config.js"></script>
+<script src="assets/js/gallery.js"></script>
 <script src="assets/js/app.js"></script>
 </body>
 </html>

@@ -8,6 +8,16 @@
   let items = []
   let activeCategory = ''
 
+  const illustrativeItem = {
+    id: 'illustration-climatiseur-avant-apres',
+    title: 'Nettoyage de climatiseur mural — Avant / Après',
+    description: 'Visuel illustratif généré par intelligence artificielle : exemple de nettoyage à l’eau et du résultat recherché. Ne représente pas une intervention réelle de KSL Entretien.',
+    category: 'resultat',
+    image_url: '/assets/img/a_clean_high_resolution_before_and_after_promotio.png',
+    alt_text: 'Illustration avant et après le nettoyage d’un climatiseur mural, avec lavage d’un filtre à l’eau.'
+  }
+
+
   const esc = (value = '') => String(value).replace(/[&<>"']/g, c => ({
     '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'
   })[c])
@@ -19,9 +29,10 @@
   }
 
   function render() {
+    const allItems = [...items.filter(item => item.id !== illustrativeItem.id), illustrativeItem]
     const data = activeCategory
-      ? items.filter(item => item.category === activeCategory)
-      : items
+      ? allItems.filter(item => item.category === activeCategory)
+      : allItems
 
     if (!data.length) {
       grid.innerHTML = '<div class="gallery-empty">Aucune image publiée dans cette catégorie pour le moment.</div>'
@@ -74,7 +85,8 @@
 
   async function load() {
     if (!config.supabaseUrl || !config.supabaseKey) {
-      status.textContent = 'Galerie temporairement indisponible.'
+      status.textContent = 'Illustration disponible. Les autres réalisations sont temporairement indisponibles.'
+      render()
       return
     }
 
@@ -99,7 +111,8 @@
       render()
     } catch (error) {
       console.error(error)
-      status.textContent = 'Impossible de charger la galerie pour le moment.'
+      status.textContent = 'Illustration disponible. Impossible de charger les autres réalisations pour le moment.'
+      render()
     }
   }
 

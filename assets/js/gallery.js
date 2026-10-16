@@ -8,6 +8,25 @@
   let items = []
   let activeCategory = ''
 
+  const additionalIllustrations = [
+    {
+      id: 'illustration-conduits-secheuse',
+      title: 'Nettoyage de conduits de sécheuse — Avant / Après',
+      description: 'Découvrez comment le nettoyage des conduits de sécheuse élimine les accumulations de charpie et favorise une meilleure circulation de l’air.',
+      category: 'resultat',
+      image_url: '/assets/img/Avant_Apr%C3%A8s%20_%20Conduits%20de%20S%C3%A9cheuse%20Nettoy%C3%A9s.png',
+      alt_text: 'Illustration générée par IA comparant un conduit de sécheuse obstrué par la charpie et un conduit nettoyé.'
+    },
+    {
+      id: 'illustration-conduits-ventilation',
+      title: 'Nettoyage de conduits de ventilation — Avant / Après',
+      description: 'Découvrez le nettoyage des conduits de ventilation pour éliminer les accumulations de poussière et favoriser une circulation d’air adéquate.',
+      category: 'resultat',
+      image_url: '/assets/img/Avant%20et%20apr%C3%A8s%20nettoyage%20des%20conduits.png',
+      alt_text: 'Illustration générée par IA comparant un conduit de ventilation poussiéreux et un conduit propre.'
+    }
+  ]
+
   const illustrativeItem = {
     id: 'illustration-climatiseur-avant-apres',
     title: 'Nettoyage de climatiseur mural — Avant / Après',
@@ -29,7 +48,7 @@
   }
 
   function render() {
-    const allItems = [...items.filter(item => item.id !== illustrativeItem.id), illustrativeItem]
+    const allItems = [...items.filter(item => item.id !== illustrativeItem.id && !additionalIllustrations.some(illustration => illustration.id === item.id)), illustrativeItem, ...additionalIllustrations]
     const data = activeCategory
       ? allItems.filter(item => item.category === activeCategory)
       : allItems

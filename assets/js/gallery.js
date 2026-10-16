@@ -11,7 +11,7 @@
   const illustrativeItem = {
     id: 'illustration-climatiseur-avant-apres',
     title: 'Nettoyage de climatiseur mural — Avant / Après',
-    description: 'Découvrez les étapes d’un nettoyage de climatiseur mural à l’eau, illustrées par une comparaison avant/après. Illustration générée par IA, à titre démonstratif.',
+    description: 'Découvrez les étapes d’un nettoyage de climatiseur mural à l’eau, illustrées par une comparaison avant/après.',
     category: 'resultat',
     image_url: '/assets/img/a_clean_high_resolution_before_and_after_promotio.png',
     alt_text: 'Illustration avant et après le nettoyage d’un climatiseur mural, avec lavage d’un filtre à l’eau.'
